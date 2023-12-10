@@ -1,49 +1,69 @@
 public class Deportes {
 //Nivel 1 :clase Base
-    String nombre;
+    public String nombre;
 
-    public Deporte(String nombre) {
+    public Deportes(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
+
 }
 //Nivel 2 :Clases derivadas de Deporte 
-class DeportesIndividuales extendes Deportes {
+class DeportesIndividuales extends Deportes {
     int NumeroJugadores;
     public DeportesIndividuales(String nombre,int NumeroJugadores){
         super(nombre);
-        this.numeroJugadores=numeroJugadores;
+        this.NumeroJugadores=NumeroJugadores;
     }
-    public int getNumeroJugadores(){
-        return NumeroJugadores;
-    }
+
 }
 class DeportesColectivos extends Deportes{
-int numeroJugadoresColectivos(String nombre ,numeroJugadoresColectivos){
-    super(nombre);
-    this.numeroJugadoresColectivos=numeroJugadoresColectivos;
+    int numeroJugadoresColectivos;
+        DeportesColectivos(String nombre ,int numeroJugadoresColectivos){
+        super(nombre);
+        this.numeroJugadoresColectivos=numeroJugadoresColectivos;
+    }
 }
-public int getnumeroJugadoresColectivos(){
-    return numeroJugadoresColectivos;
-} 
+
+// Nivel 3
+class Futbol extends DeportesColectivos {
+    public int goles;
+    public Futbol(String nombre, int numeroJugadores, int goles) {
+        super(nombre, numeroJugadores);
+        this.goles=goles;
+    }
 }
+
+class Tenis extends DeportesIndividuales {
+    public int puntos;
+    public Tenis(String nombre, int numeroJugadores, int puntos) {
+        super(nombre, numeroJugadores);
+        this.puntos=puntos;
+    }
+}
+
+// Nivel 4
+class FutbolSala extends Futbol {
+    public int vocalia;
+    public FutbolSala(String nombre, int numeroJugadores, int goles, int vocalia ) {
+        super(nombre, numeroJugadores, goles);
+        this.vocalia=vocalia;
+    }
+}
+
+class PingPong extends Tenis {
+    public String raqueta;
+    public PingPong(String nombre, int numeroJugadores, int puntos, String raqueta) {
+        super(nombre, numeroJugadores, puntos);
+        this.raqueta=raqueta;
+    }
+};
+
+
     
     
 
 
-
-
-
-
-
-
-
-
-
-    
 
     
     public static void main(String[] args){
