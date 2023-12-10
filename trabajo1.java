@@ -58,36 +58,24 @@ class PingPong extends Tenis {
         this.raqueta=raqueta;
     }
 };
-
-
-    
-    
-
-
-
-    
-    public static void main(String[] args){
-        /*Dilan*/
-
-
-
-
-
-        /*Alex*/
-
-
-
-
-
-
-    
-        /*Alexis*/
-    
-        System.out.println("Hola mundo");
-        System.out.println("asioi mundo");
-        System.out.println("ok");
-        System.out.println("okasd");
-        System.out.println("Dilan");
-
+//Nivel 5
+class Datosspartido extends FutbolSala {
+    public int numeropartido;
+    public String equipojugador;
+    public Datospartido(String nombre, int numeroJugadores, int goles, int vocalia, int numeropartido, String equipojugador ){
+        super(nombre,numeroJugadores, goles, vocalia);
+        this.numeropartido = numeropartido;
+        this.equipojugador = equipojugador;
     }
+class Cancha extends PingPong {
+    public String tipo;
+    public Cancha(String nombre, int numeroJugadores, int puntos, String raqueta, String tipo){
+        super(nombre, numeroJugadores, puntos, raqueta);
+        this.tipo = tipo;
+    }
+    
+}
+    
+}
+
 }
